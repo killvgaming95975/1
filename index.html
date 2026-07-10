@@ -589,7 +589,7 @@
       try {
         const response = await fetch('https://v6.exchangerate-api.com/v6/698224ad289e31ebdc0addb4/latest/USD');
         const data = await response.json();
-        exchangeRate = data.conversion_rates.INR - 2;
+        exchangeRate = data.conversion_rates.INR - 2 - 0.4199;
         localStorage.setItem('exchangeRateData', JSON.stringify({ rate: exchangeRate, date: today }));
         document.getElementById('exchangeRate').innerHTML = `
           <i class="fas fa-exchange-alt"></i>
